@@ -12,14 +12,15 @@ var mws = require('amazon-mws-node')({
     endpoint: '/Orders/2013-09-01',
     params: {
       'Action': 'ListOrders',
-      'CreatedAfter': '2016-11-23',
+      'CreatedAfter': '2016-11-01',
       'MarketplaceId.Id.1': 'ATVPDKIKX0DER',
       'SellerId': 'A2LX4IL6EQVA63',
-      'MWSAuthToken': 'MWS_AUTH_TOKEN',
+      'MWSAuthToken': 'amzn.mws.64abd052-d8bc-adc7-0d2e-35a0e51acb5f',
       'Version': '2013-09-01'
     },
     callback: function (error, response, body) {
       result = body;
+      console.log('this is the result'); 
       console.log(body);
     }
   });
